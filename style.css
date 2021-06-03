@@ -10,5 +10,14 @@
   height: 20px;
   border: black 2px solid;
   border-radius: 10px;
+  margin: 4px;
+  padding: 4px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4px;
+  padding: 4px;
 }
 
