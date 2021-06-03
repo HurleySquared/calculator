@@ -16,8 +16,14 @@
 
 .keys {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 4px;
   padding: 4px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
+#enter {
+  grid-column-start: 4;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
