@@ -1,19 +1,3 @@
-const add = (a, b) => {
-  return a + b;
-};
-
-const subtract = (a, b) => {
-  return a - b;
-};
-
-const divide = (a, b) => {
-  return a / b;
-};
-
-const multiply = (a, b) => {
-  return a * b;
-};
-
 // Click event for buttons 
 const display = document.querySelector(".display");
 const keys = document.querySelector(".keys");
@@ -38,17 +22,38 @@ keys.addEventListener('click', e => {
     display.textContent = displayedNum + '.'
   }
 
+  if (action === 'calculate') {
+    const secondValue = displayedNum;
+  }
+
   if (
     action === 'add' ||
     action === 'subtract' ||
     action === 'divide' ||
     action === 'multiply'
   ) {
-    key.classList.add('is-depressed')
-    calculator.dataset.previousKeyType = 'operator'
+    key.classList.add('is-depressed');
+    calculator.dataset.previousKeyType = 'operator';
+    calculator.dataset.firstValue = displayedNum;
+    calculator.dataset.operator = action;
   };
 
   Array.from(key.parentNode.children)
     .forEach(k => k.classList.remove('is-depressed'))
+  }
+
+  const calculate = (n1, operator, n2) => {
+    let result = '';
+
+    if (operator === 'add') {
+      result = parseFloat(n1) + parseFloat(n2);
+    } else if (operator === 'subtract') {
+      result = parseFloat(n1) -parseFloat(n2);
+    } else if (operator === 'multiply') {
+      result = parseFloat(n1) * parseFloat(n2);
+    } else if (operator === 'divide') {
+      result = parseFloat(n1) / parseFloat(n2);
+    }
+    return result;
   }
 })
