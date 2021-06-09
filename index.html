@@ -10,12 +10,12 @@
 <body>
   <h1>Calculator.js</h1>
   <div class="shell">
-    <div class="answer">0</div>
+    <div class="display">0</div>
     <div class="keys">
-      <button id="plus">+</button>
-      <button id="minus">-</button>
-      <button id="divide">/</button>
-      <button id="multiply">*</button>
+      <button class="operator" data-action="add">+</button>
+      <button class="operator" data-action="subtract">-</button>
+      <button class="operator" data-action="divide">/</button>
+      <button class="operator" data-action="multiply">*</button>
       <button id="1">1</button>
       <button id="2">2</button>
       <button id="3">3</button>
@@ -25,10 +25,10 @@
       <button id="7">7</button>
       <button id="8">8</button>
       <button id="9">9</button>
-      <button id="dot">.</button>
+      <button id="dot" data-action="decimal">.</button>
       <button id="0">0</button>
-      <button id="clear">CLR</button>
-      <button id="enter">Enter</button>
+      <button id="clear" data-action="clear">CLR</button>
+      <button class="enter" data-action="calculate">Enter</button>
     </div>
   </div>
   <script src="script.js"></script>
